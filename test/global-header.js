@@ -16,6 +16,7 @@ describe('General', function () {
 
     it('Get Header title', function(){
         let title = browser.getText('.custom-header span');
+        browser.pause(5000);
         assert.equal(title, 'BugTracker', 'Title is incorrect');
     })
 })
