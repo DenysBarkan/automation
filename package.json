@@ -1,30 +1,34 @@
 {
-  "name": "automation-webdriverio",
+  "name": "automation",
   "version": "1.0.0",
   "description": "Install the latest Node.js from https://nodejs.org/en/ ### 1.2. Git: Install the latest Git from  https://git-scm.com/ ## 2. Creating project ### 2.1. Create project folder: Open terminal and navigate to desired folder where you're going to store all of your projects. For example `projects` folder: ```` cd projects/ ```` Create a folder for automation project. For example, `automation-webdriverio`: ```` mkdir automation-webdriverio ```` And navigate to the created folder: ```` cd automation-webdriverio ```` ### 2.2. Install webDriver I/O and Selenium: ````  npm i --save-dev webdriverio selenium-standalone ````",
   "main": "index.js",
   "scripts": {
     "test": "rm -rf allure-report allure-results && wdio wdio.conf.js",
+    "test2": "rm -rf allure-report allure-results && wdio wdio.conf2.js",
     "report": "allure generate && allure open"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/artsenius/automation.git"
+    "url": "git+https://github.com/DenysBarkan/automation.git"
   },
-  "author": "Arthur Senko",
+  "author": "dB",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/artsenius/automation-webdriverio/issues"
-  },
-  "homepage": "https://github.com/artsenius/automation-webdriverio#readme",
+
   "dependencies": {
-    "allure-commandline": "^2.8.1",
-    "axios": "^0.18.0",
-    "chai": "^4.2.0",
+    "axios": "^0.18.1",
     "fs": "0.0.1-security",
     "mocha": "^5.2.0",
-    "wdio-allure-reporter": "^0.6.3",
+    "wdio-allure-reporter": "^0.6.3"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "allure-commandline": "^2.9.0",
+    "chai": "^4.2.0",
     "wdio-mocha-framework": "^0.6.4",
+    "wdio-sauce-service": "^0.4.14",
     "wdio-selenium-standalone-service": "0.0.10",
     "wdio-spec-reporter": "^0.1.5",
     "webdriverio": "^4.13.2"
